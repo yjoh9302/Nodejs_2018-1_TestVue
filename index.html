@@ -1,0 +1,26 @@
+<html>
+
+<head>
+
+    <meta charset="UTF-8" />
+</head>
+
+<body> <!-- DOM 구별-->
+    <div id="app">
+        this is a test.
+        <!--Vue.js domain 중괄호 두개는 Vue영역임을 알려줌 -->
+        <br>{{message}} <!--Vue에 있는 메시지의 text에 따라 바뀜 -->
+        <!--홈페이지에서 myApp.$data.message = 'Service';로 하면  Service로 바뀜 -->
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        const myApp = new Vue({//vue에 대한 constructor 호출
+            el: '#app',//vue에 들어가는 객체는 키값이 정해져 있음, 
+                        //#을 붙어app이 id라는 것으로 표시 DOM의id하고 같아야한다.
+            data:{message: 'Cloud!'}
+        });
+    </script>
+
+</body>
+
+</html>
