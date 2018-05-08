@@ -2,7 +2,10 @@
 
 <head>
 
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
 </head>
 
 <body>
@@ -18,9 +21,9 @@
         <span :title="date">마우스를 가까이 가져오세요</span>
         <!-- title옵션을 vue로 묶음 ""안의 영역이 vue가 접근하는 영역 v- 이용
         v-bind:를 생략하고 : 으로 사용가능-->
-        <br>
+        <br>내가 공부하고 싶은 언어
         <span v-if="seen">볼 수 있다.</span>
-        <span v-else>볼 수 있다.</span>
+        <span v-else>볼 수 없다.</span>
         <!-- myApp.$data.seen = true,false로 문장이 없어지거나 나타나짐-->
         <br>
         <ul>
@@ -28,12 +31,45 @@
             <li v-for="todo in todos">{{todo.text}}</li>
             <!-- todos란 배열에서 in 하나씩 뽑는다.
             myApp.$data.todos.push({text: '추가할것'}) 리스트에추가
-            myApp.$data.todos.pop() 리스트에서 삭제-->
-
-
+            myApp.$data.todos.pop() 리스트에서 밑에서 부터 삭제-->
         </ul>
-
+        <div class="columns">
+            <div class="column">1</div>
+            <div class="column">2</div>
+            <div class="column">3</div>
+            <div class="column">4</div>
+            <div class="column">5</div>
+        </div>
     </div>
+    <section class="section">
+        <div class="container">
+            <h1 class="title">제목</h1>
+            <h2 class="subtitle">중요한 내용</h2>
+        </div>
+
+        <a class="button is-link">button</a>
+
+        <span class="tag is-primary">트위터
+            <button class="delete is small"></button>
+        </span>
+
+        <article class="message">
+
+            <div class="message-header">
+                <p>Hello World</p>
+                <button class="delete" aria-label="delete"></button>
+            </div>
+
+            <div class="message-body">
+
+                <span class="block is-1">
+                    this is a test of message in Bulma.
+                </span>
+                
+            </div>
+        </article>
+
+    </section>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script>
         const myApp = new Vue({//vue에 대한 constructor 호출
